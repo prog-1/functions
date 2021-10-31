@@ -16,7 +16,7 @@ func max(a, b int) int {
 	return b
 }
 
-// func minmax(a, b, c int) (mn, max int) {
+// func minmax(a, b, c int) (mn, mx int) {
 func minmax(a, b, c int) (int, int) {
 	return min(a, min(b, c)), max(a, max(b, c))
 }
