@@ -6,7 +6,7 @@ import "testing"
 func TestPow(t *testing.T) {
 	for _, tc := range []struct {
 		x, y uint
-		want int
+		want uint
 	}{
 		// Test cases.
 	} {
