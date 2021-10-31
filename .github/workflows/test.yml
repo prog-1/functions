@@ -1,30 +1,74 @@
 name: Test
 on: [push, pull_request]
 jobs:
-  build:
+  _02-minmax:
+    name: 02-minmax
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
         go-version: 1.16
-
-    - name: 02-minmax
+    - name: Test
       run: go test -v ./02-minmax
 
-    - name: 03-minmax
+  _03-minmax:
+    name: 03-minmax
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+    - name: Test
       run: go test -v ./03-minmax
 
-    - name: exercises/01_sort4
+  _01_sort4:
+    name: exercises/01_sort4
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+    - name: Test
       run: go test -v ./exercises/01_sort4
 
-    - name: exercises/02_sort3
+  _02_sort3:
+    name: exercises/02_sort3
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+    - name: Test
       run: go test -v ./exercises/02_sort3
 
-    - name: exercises/03_reverse
+  _03_reverse:
+    name: exercises/03_reverse
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+    - name: Test
       run: go test -v ./exercises/03_reverse
 
-    - name: exercises/04_power
+  _04_power:
+    name: exercises/04_power
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+    - name: Test
       run: go test -v ./exercises/04_power
