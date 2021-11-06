@@ -8,8 +8,18 @@ func TestPow(t *testing.T) {
 		x, y uint
 		want uint
 	}{
-		// Test cases.
+		{x: 1, y: 2, want: 1},
+		{x: 2, y: 2, want: 4},
+		{x: 3, y: 2, want: 9},
+		{x: 4, y: 2, want: 16},
+		{x: 1, y: 4, want: 1},
+		{x: 2, y: 4, want: 16},
+		{x: 3, y: 4, want: 81},
+		{x: 0, y: 2, want: 0},
+		{x: 0, y: 4, want: 0},
 	} {
-		// Test body.
+		if got := pow(tc.x, tc.y); got != tc.want {
+			t.Errorf("reverse(%v, %v) = %v, want = %v", tc.x, tc.y, got, tc.want)
+		}
 	}
 }
