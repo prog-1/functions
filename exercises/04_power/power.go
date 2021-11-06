@@ -6,11 +6,13 @@ func Pow(x, y int) int {
 	if y == 0 {
 		x = 1
 		return x
-	} else {
-		for tmp := x; y != 1; y-- {
-			x = x * tmp
-
-		}
+	}
+	if x == 0 {
+		x = 0
+		return x
+	}
+	for tmp := x; y != 1; y-- {
+		x = x * tmp
 
 	}
 	return x
@@ -23,8 +25,6 @@ func main() {
 	fmt.Scanln(&x, &y)
 	if y < 0 {
 		fmt.Println("Error: power below 0 couldn't be used")
-	} else if x == 0 {
-		fmt.Print("pow = 0")
 	} else {
 		tmp := Pow(x, y)
 		fmt.Println("x ^ y =", tmp)
