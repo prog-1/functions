@@ -19,6 +19,7 @@ func TestPow(t *testing.T) {
 		{x: 0, y: 2, want: 0},
 		{x: -1, y: 5, want: -1},
 		{x: -2, y: 3, want: -8},
+		{x: 0, y: 0, want: 1},
 	} {
 		if got := pow(tc.x, tc.y); got != tc.want {
 			t.Errorf("power(%v, %v) = %v, want = %v", tc.x, tc.y, got, tc.want)
