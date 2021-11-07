@@ -3,13 +3,11 @@ package main
 import "fmt"
 
 func pow(a int, b int) int {
-	if b == 0 {
-		return 1
+	p := 1
+	for ; b > 0; b-- {
+		p *= a
 	}
-	res := a
-	for i := b; i > 1; i, res = i-1, res*a {
-	}
-	return res
+	return p
 }
 
 func main() {
