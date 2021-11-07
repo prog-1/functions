@@ -13,7 +13,6 @@ func sort3(a, b, c int) (int, int, int) {
 	a, b = minmax(a, b)
 	b, c = minmax(b, c)
 	a, b = minmax(a, b)
-	b, c = minmax(b, c)
 	return a, b, c
 }
 
