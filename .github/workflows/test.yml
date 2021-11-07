@@ -1,4 +1,4 @@
-name: Test1
+name: Test
 on: [push, pull_request]
 jobs:
   _02-minmax:
