@@ -20,6 +20,7 @@ func TestPow(t *testing.T) {
 		{x: 3, y: 4, want: 81},
 		{x: 5, y: 2, want: 25},
 		{x: 12, y: 3, want: 1728},
+		{x: 4, y: 12, want: 16777216},
 	} {
 		// Test body.
 		if got := Pow(tc.x, tc.y); got != tc.want {
