@@ -2,7 +2,17 @@ package main
 
 import "fmt"
 
-func sort3(a, b, c int) (int, int, int) {
+func sort3(a, b, c int) (int, int, int) { // 3 4 5
+	if b < a {
+		a, b = b, a
+	}
+	if c < a {
+		a, c = c, a
+	}
+	if c < b {
+		b, c = c, b
+	}
+
 	return a, b, c
 }
 
