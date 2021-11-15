@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func reverse(n int) int {
-	var s = 0
+	var s int
 	for ; n != 0; n /= 10 {
 		s = s*10 + (n % 10)
 	}
