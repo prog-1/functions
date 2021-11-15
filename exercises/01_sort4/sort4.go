@@ -7,7 +7,6 @@ func minmax(a, b int) (mn, mx int) {
 		return b, a
 	}
 	return a, b
-
 }
 
 func sort4(a, b, c, d int) (int, int, int, int) {
@@ -24,8 +23,6 @@ func main() {
 	fmt.Print("Enter 4 numbers: ")
 	var a, b, c, d int
 	fmt.Scan(&a, &b, &c, &d)
-
 	a, b, c, d = sort4(a, b, c, d)
-
 	fmt.Println("Sorted numbers:", a, b, c, d)
 }
