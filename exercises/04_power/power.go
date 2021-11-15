@@ -3,14 +3,12 @@ package main
 import "fmt"
 
 func Pow(x, y uint) (uint, uint) {
+	for p := x; y != 1 && y != 0; y-- {
+		x = x * p
+	}
 	if y == 0 {
 		x = 1
-	} else {
-		for p := x; y != 1; y-- {
-			x = x * p
-		}
 	}
-
 	return x, y
 }
 func main() {
