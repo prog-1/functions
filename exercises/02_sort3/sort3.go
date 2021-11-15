@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func sort3(a, b, c int) (int, int, int) { // 3 4 5
+func sort2_3(a, b, c int) (int, int, int) {
 	if b < a {
 		a, b = b, a
 	}
@@ -14,6 +14,10 @@ func sort3(a, b, c int) (int, int, int) { // 3 4 5
 	}
 
 	return a, b, c
+}
+
+func sort3(a, b, c int) (int, int, int) {
+	return sort2_3(a, b, c)
 }
 
 func main() {
