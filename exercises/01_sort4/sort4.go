@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func minmax(a, b int) (mn, mx int) {
+
+	if b < a {
+		return b, a
+	}
 	return a, b
 }
 
