@@ -3,7 +3,10 @@ package main
 import "fmt"
 
 func minmax(a, b int) (mn, mx int) {
-	return a, b
+	if a <= b {
+		return a, b
+	}
+	return b, a
 }
 
 func sort4(a, b, c, d int) (int, int, int, int) {
