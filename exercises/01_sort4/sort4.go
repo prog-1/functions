@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func minmax(a, b int) (mn, mx int) {
+	if b < a {
+		return b, a
+	}
 	return a, b
 }
 
@@ -24,4 +27,5 @@ func main() {
 	a, b, c, d = sort4(a, b, c, d)
 
 	fmt.Println("Sorted numbers:", a, b, c, d)
-}
+} //input: 2 6 3 7 | -3 1 0 -6 | 0 1 0 1 | 38 951 73 253 |
+//output : 2 3 6 7 | -6 -3 0 1 | 0 0 1 1 | 38 73 253 951 |
