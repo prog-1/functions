@@ -36,9 +36,9 @@ func TestSort4(t *testing.T) {
 		{4, 1, 3, 2, 1, 2, 3, 4},
 		{4, 1, 2, 3, 1, 2, 3, 4},
 	} {
-		gotA, gotB, gotC, gotD := sort4(tc.a, tc.b, tc.c, tc.d)
+		gotA, gotB, gotC, gotD := Sort4(tc.a, tc.b, tc.c, tc.d)
 		if gotA != tc.wantA || gotB != tc.wantB || gotC != tc.wantC || gotD != tc.wantD {
-			t.Errorf("sort4(%v, %v, %v, %v) = (%v, %v, %v, %v), want = (%v, %v, %v, %v)",
+			t.Errorf("Sort4(%v, %v, %v, %v) = (%v, %v, %v, %v), want = (%v, %v, %v, %v)",
 				tc.a, tc.b, tc.c, tc.d, gotA, gotB, gotC, gotD, tc.wantA, tc.wantB, tc.wantC, tc.wantD)
 		}
 	}
