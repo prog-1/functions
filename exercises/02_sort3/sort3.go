@@ -9,7 +9,7 @@ func minmax(a, b int) (mn, mx int) {
 	return a, b
 }
 
-func sort3(a, b, c int) (int, int, int) {
+func Sort3(a, b, c int) (int, int, int) {
 	a, b = minmax(a, b)
 	b, c = minmax(b, c)
 	a, b = minmax(a, b)
@@ -20,6 +20,6 @@ func main() {
 	fmt.Print("Enter 3 numbers: ")
 	var a, b, c int
 	fmt.Scan(&a, &b, &c)
-	a, b, c = sort3(a, b, c)
+	a, b, c = Sort3(a, b, c)
 	fmt.Println("Sorted:", a, b, c)
 }
