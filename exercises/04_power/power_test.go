@@ -16,12 +16,13 @@ func TestPow(t *testing.T) {
 		{x: 1, y: 1, want: 1},
 		{x: 2, y: 3, want: 8},
 		{x: 3, y: 2, want: 9},
+		{x: 4, y: 8, want: 65_536},
 		{x: 9, y: 6, want: 531_441},
 		{x: 5, y: 5, want: 3125},
 		{x: 7, y: 7, want: 823_543},
 	} {
-		if got := pow(tc.x, tc.y); got != tc.want {
-			t.Errorf("pow(%v, %v) = (%v), want = (%v)", tc.x, tc.y, got, tc.want)
+		if got := Pow(tc.x, tc.y); got != tc.want {
+			t.Errorf("Pow(%v, %v) = (%v), want = (%v)", tc.x, tc.y, got, tc.want)
 		}
 	}
 }

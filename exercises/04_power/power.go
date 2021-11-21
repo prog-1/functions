@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func pow(x, y uint) uint {
+func Pow(x, y uint) uint {
 	if y == 0 {
 		x = 1
 		return x
@@ -17,6 +17,6 @@ func main() {
 	fmt.Println("Enter two numbers:")
 	var x, y uint
 	fmt.Scan(&x, y)
-	integer := pow(x, y)
+	integer := Pow(x, y)
 	fmt.Println(x, "^", y, "=", integer)
 }
