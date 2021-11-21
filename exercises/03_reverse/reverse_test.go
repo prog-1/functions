@@ -11,13 +11,15 @@ func TestReverse(t *testing.T) {
 		{n: 1, want: 1},
 		{n: 11, want: 11},
 		{n: 12, want: 21},
+		{n: 84, want: 48},
 		{n: 123, want: 321},
 		{n: 1223, want: 3221},
+		{n: 7495, want: 5947},
 		{n: 10_000, want: 1},
 		{n: -234, want: -432},
 	} {
-		if got := reverse(tc.n); got != tc.want {
-			t.Errorf("reverse(%v) = %v, want = %v", tc.n, got, tc.want)
+		if got := Reverse(tc.n); got != tc.want {
+			t.Errorf("Reverse(%v) = %v, want = %v", tc.n, got, tc.want)
 		}
 	}
 }
