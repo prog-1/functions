@@ -14,6 +14,10 @@ func TestReverse(t *testing.T) {
 		{n: 123, want: 321},
 		{n: 1223, want: 3221},
 		{n: 10_000, want: 1},
+		{n: -1, want: -1},
+		{n: -1234, want: -4321},
+		{n: -10_000, want: -1},
+		{n: -145321, want: -123541},
 	} {
 		if got := reverse(tc.n); got != tc.want {
 			t.Errorf("reverse(%v) = %v, want = %v", tc.n, got, tc.want)
